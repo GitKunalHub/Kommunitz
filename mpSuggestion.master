@@ -1,0 +1,576 @@
+﻿<%@ Master Language="VB" CodeFile="mpSuggestion.master.vb" Inherits="mpSuggestion" AutoEventWireup="true" %>
+   <META http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
+<META http-equiv="Page-Exit" content="blendTrans(Duration=0.1)">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Select Interests!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+         <form runat="server">
+	<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="content">
+							<div class="inner">
+								<h1>Select your Interest!</h1>
+								<p> We want to recommend our Users the most premium and top grossing Communities. </p>
+							</div>
+						</div>
+						<nav class="content">
+							<ul>
+								<li><asp:HyperLink ID="hlSports" NavigateUrl="#Sports" runat="server">Sports</asp:HyperLink></li>
+								<li><asp:HyperLink ID="hlTechnology" NavigateUrl="#Technology" runat="server">Technology</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="hlManga" NavigateUrl="#Manga" runat="server">Manga</asp:HyperLink></li>
+								<li><asp:HyperLink ID="hlSpace" NavigateUrl="#Space" runat="server">Space</asp:HyperLink></li>
+                                   	</ul>
+                            <ul>
+								<li><asp:HyperLink ID="hlArt" NavigateUrl="#Art" runat="server">Art</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="hlAndroid" NavigateUrl="#Android" runat="server">Android</asp:HyperLink></li>
+								<li><asp:HyperLink ID="hlMusic" NavigateUrl="#Music" runat="server">Music</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="hlSciFI" NavigateUrl="#SciFi" runat="server">Sci-Fi</asp:HyperLink></li>
+                                   	</ul>
+                            <ul>
+								<li><asp:HyperLink ID="hlBeauty" NavigateUrl="#Beauty" runat="server">Beauty</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="hlCovid19" NavigateUrl="#Covid19" runat="server">Covid-19</asp:HyperLink></li>
+								<li><asp:HyperLink ID="hlGaming" NavigateUrl="#Gaming" runat="server">Gaming</asp:HyperLink></li>
+								<li><asp:HyperLink ID="hlHorror" NavigateUrl="#Horror" runat="server">Horror</asp:HyperLink></li>
+                            </ul>
+                                <ul>
+                                <li><asp:HyperLink ID="hlAnimals" NavigateUrl="#Animals" runat="server">Animals</asp:HyperLink></li>
+								<li><asp:HyperLink ID="hlBollywood" NavigateUrl="#Bollywood" runat="server">Bollywood</asp:HyperLink></li>
+								<li><asp:HyperLink ID="hlTips" NavigateUrl="#Tips" runat="server">Tips</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="hlFunny" NavigateUrl="#Funny" runat="server">Funny</asp:HyperLink></li>                      
+					           </ul>
+                                </nav>
+                        <asp:Button ID="btnSubmit" runat="server" Text="Continue" />
+                    </header>
+
+				<!-- Main -->
+                
+
+					<div id="main">
+						<!-- Intro -->
+							<article id="Sports">
+                                <asp:Panel ID="pnlCommunities" runat="server">
+
+                                    <asp:DataList ID="dlSports" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource1">
+
+                                        <ItemTemplate>
+                                           
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;Cricket&quot; or Kommunity_Name=&quot;Football&quot; or Kommunity_Name=&quot;CricketMemes&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+                        <article id="Technology">
+                                <asp:Panel ID="pnlTechnology" runat="server">
+                                    <asp:DataList ID="dlTechnology" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource2">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" OnClientClick="dlSports_ItemCommand; return false" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;TechnologyWhereItsAt&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Manga">
+                                <asp:Panel ID="pnlManga" runat="server">
+                                    <asp:DataList ID="dlManga" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource3">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>'/><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString3 %>" ProviderName="<%$ ConnectionStrings:ConnectionString3.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;Manga&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Space">
+                                <asp:Panel ID="pnlSpace" runat="server">
+                                    <asp:DataList ID="dlSpace" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource4">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString4 %>" ProviderName="<%$ ConnectionStrings:ConnectionString4.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;Space&quot; or Kommunity_Name=&quot;TimeTravel&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Art">
+                                <asp:Panel ID="pnlArt" runat="server">
+                                    <asp:DataList ID="dlArt" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource5">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>'/><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:cnArt %>" ProviderName="<%$ ConnectionStrings:cnArt.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;GuessTheArt&quot; or Kommunity_Name=&quot;ShowerThoughts&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Android">
+                                <asp:Panel ID="pnlAndroid" runat="server">
+                                    <asp:DataList ID="dlAndroid" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource6">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:cnAndroid %>" ProviderName="<%$ ConnectionStrings:cnAndroid.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;Android&quot; or Kommunity_Name=&quot;MIUI&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Music">
+                                <asp:Panel ID="pnlMusic" runat="server">
+                                    <asp:DataList ID="dlMusic" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource7">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:cnMusic %>" ProviderName="<%$ ConnectionStrings:cnMusic.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;OneDirection&quot; or Kommunity_Name=&quot;HarryStyles&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="SciFi">
+                                <asp:Panel ID="pnlSciFi" runat="server">
+                                    <asp:DataList ID="dlSciFi" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource8">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:cnSciFi %>" ProviderName="<%$ ConnectionStrings:cnSciFi.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;TechnologyWhereItsAt&quot; or Kommunity_Name=&quot;TimeTravel&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Beauty">
+                                <asp:Panel ID="pnlBeauty" runat="server">
+                                    <asp:DataList ID="dlBeauty" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource9">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join"  CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>'/><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource9" runat="server" ConnectionString="<%$ ConnectionStrings:cnBeauty %>" ProviderName="<%$ ConnectionStrings:cnBeauty.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;SkinCare&quot; or Kommunity_Name=&quot;MakeUpTips&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Covid19">
+                                <asp:Panel ID="pnlCovid" runat="server">
+                                    <asp:DataList ID="dlCovid" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource10">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource10" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString5 %>" ProviderName="<%$ ConnectionStrings:ConnectionString5.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;Covid19&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Gaming">
+                                <asp:Panel ID="pnlGaming" runat="server">
+                                    <asp:DataList ID="dlGaming" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource11">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>'/><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource11" runat="server" ConnectionString="<%$ ConnectionStrings:cnGaming %>" ProviderName="<%$ ConnectionStrings:cnGaming.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;PUBG&quot; or Kommunity_Name=&quot;Cricket&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Horror">
+                                <asp:Panel ID="pnlHorror" runat="server">
+                                    <asp:DataList ID="dlHorror" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource12">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource12" runat="server" ConnectionString="<%$ ConnectionStrings:cnHorror %>" ProviderName="<%$ ConnectionStrings:cnHorror.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;Ghosts&quot; or Kommunity_Name=&quot;HorrorMovies&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Animals">
+                                <asp:Panel ID="pnlAnimals" runat="server">
+                                    <asp:DataList ID="dlAnimals" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource13">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>'/><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource13" runat="server" ConnectionString="<%$ ConnectionStrings:cnAnimals %>" ProviderName="<%$ ConnectionStrings:cnAnimals.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;Panda&quot; or Kommunity_Name=&quot;AdviceAnimals&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Bollywood">
+                                <asp:Panel ID="pnlBollywood" runat="server">
+                                    <asp:DataList ID="dlBollywood" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource14">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource14" runat="server" ConnectionString="<%$ ConnectionStrings:cnBollywood %>" ProviderName="<%$ ConnectionStrings:cnBollywood.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;Bollywood&quot; or Kommunity_Name=&quot;HorrorMovies&quot; or Kommunity_Name=&quot;WhatIf&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Tips">
+                                <asp:Panel ID="pnlTips" runat="server">
+                                    <asp:DataList ID="dlTips" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource15">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource15" runat="server" ConnectionString="<%$ ConnectionStrings:cnTips %>" ProviderName="<%$ ConnectionStrings:cnTips.ProviderName %>" SelectCommand="Select * from tblKommunity where Kommunity_Name=&quot;LifeProTips&quot; or Kommunity_Name=&quot;ShowerThoughts&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+<article id="Funny">
+                                <asp:Panel ID="pnlFunny" runat="server">
+                                    <asp:DataList ID="dlFunny" runat="server" DataKeyField="Kommunity_Name" Width="576px" Style="background-color: Transparent" DataSourceID="SqlDataSource16">
+
+                                        <ItemTemplate>
+                                            <br />
+                                            <div class="flex-container">
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Image ID="Image3" class="rounded-circle me-3" Style="width: 36px; height: 36px;" runat="server" ImageUrl='<%# Eval("Kommunity_ProfileImg", "{0}") %>' /></a>
+                <b>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("Kommunity_Name") %>' /></b>
+                                                <br />
+                                                &nbsp;&nbsp;&nbsp;
+                                                <asp:Label ID="Label2" Style="margin-left: 55px" runat="server" Text='<%# Eval("Kommunity_Bio") %>' />
+                                                <%--   </div>--%>
+                                                <br />
+                                                                                &nbsp;&nbsp;&nbsp;
+                                                           &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                           <asp:Button ID="btnJoin" runat="server" Text="Join" CommandName="btnJoin" CommandArgument='<%# Eval("Kommunity_Name")%>' /><asp:Button ID="btnEdit" runat="server" Text="Edit Profile" Visible="false" />
+                                            </div>
+                                            <br />
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    <asp:SqlDataSource ID="SqlDataSource16" runat="server" ConnectionString="<%$ ConnectionStrings:cnFunny %>" ProviderName="<%$ ConnectionStrings:cnFunny.ProviderName %>" SelectCommand="select * from tblKommunity where Kommunity_Name=&quot;Memes&quot;"></asp:SqlDataSource>
+                                </asp:Panel>
+							</article>
+
+					</div>
+                     
+                 
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main2.js"></script>
+                 </form>
+	</body>
+</html>
+

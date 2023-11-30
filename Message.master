@@ -1,0 +1,766 @@
+﻿<%@ Master Language="VB" CodeFile="Message.master.vb" Inherits="Message" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <META http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
+<META http-equiv="Page-Exit" content="blendTrans(Duration=0.1)">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Cera Dark Mode">
+	<meta name="application-name" content="Cera Dark Mode">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="msapplication-TileColor" content="#ffffff">
+    
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- Icons -->
+	
+	<title>Kommunitz&#8211; Welcome to the world of infinite communities &#038;</title>
+
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+
+<link rel="alternate" type="application/rss+xml" title="Cera Dark Mode &raquo; Feed" href="https://dark-mode.cera-theme.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Cera Dark Mode &raquo; Comments Feed" href="https://dark-mode.cera-theme.com/comments/feed/" />
+<%--<link rel="stylesheet" type="text/css" href="css2/bootstrap.css" />--%>
+<script src="js/angular.js"></script>
+<script src="js/script.js"></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='Cera CSS/style.min.css' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code>code{font-family:Menlo,Consolas,monaco,monospace;color:#1e1e1e;padding:.8em 1em;border:1px solid #ddd;border-radius:4px}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-group:where(.has-background){padding:1.25em 2.375em}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto;opacity:.4}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+</style>
+<link rel='stylesheet' id='bp-login-form-block-css'  href='Cera CSS/login-form.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='Cera CSS/member.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-members-block-css'  href='Cera CSS/member.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-dynamic-members-block-css'  href='Cera CSS/dynamic-members.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-latest-activities-block-css'  href='Cera CSS/latest-activities.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-friends-block-css'  href='Cera CSS/friends.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='Cera CSS/group.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-groups-block-css'  href='Cera CSS/groups.min[2].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-dynamic-groups-block-css'  href='Cera CSS/dynamic-groups.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-sitewide-notices-block-css'  href='Cera CSS/sitewide-notices.min[1].css' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--content-background-color: #f0f3f4;--wp--preset--color--display-heading: #48465b;--wp--preset--color--text-color: #6c7293;--wp--preset--color--button-primary: #4e64dd;--wp--preset--color--button-secondary: #d8e1f3;--wp--preset--color--table-striped: rgba(0, 0, 20, 0.05);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--primary-to-primary-hover: linear-gradient(135deg, rgba(78,100,221,1) 0%, rgba(44,86,198,1) 100%);--wp--preset--gradient--secondary-to-secondary-hover: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--text: 16px;--wp--preset--font-size--text-smaller: 14px;--wp--preset--font-size--text-bigger: 18px;--wp--preset--font-size--h-1: 32px;--wp--preset--font-size--h-2: 28px;--wp--preset--font-size--h-3: 22px;--wp--preset--font-size--h-4: 20px;--wp--preset--font-size--h-5: 16px;--wp--preset--font-size--h-6: 15px;--wp--preset--font-size--dh-1: 45px;--wp--preset--font-size--dh-2: 34px;--wp--preset--font-size--dh-3: 29px;--wp--preset--font-size--dh-4: 22px;--wp--preset--font-size--subheading: 14px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='bbp-default-css'  href='cera css/bbpress.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-mentions-css-css'  href='cera css/mentions.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='cera css/buddypress.min[1].css' type='text/css' media='screen' />
+<link rel='stylesheet' id='swiper-css'  href='cera css/swiper-bundle.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-swipe-directory-swiper-css'  href='cera css/directory-swiper[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='cera css/dashicons.min[2].css' type='text/css' media='all' />
+<link rel='stylesheet' id='grimlock-css'  href='cera css/style[4].css' type='text/css' media='all' />
+<link rel='stylesheet' id='grimlock-login-css'  href='cera css/style[3].css' type='text/css' media='all' />
+<link rel='stylesheet' id='grimlock-animate-css'  href='cera css/style[2].css' type='text/css' media='all' />
+<link rel='stylesheet' id='grimlock-author-avatars-css'  href='cera css/style[5].css' type='text/css' media='all' />
+<link rel='stylesheet' id='grimlock-bbpress-css'  href='cera css/style[6].css' type='text/css' media='all' />
+<link rel='stylesheet' id='grimlock-buddypress-css'  href='cera css/style[7].css' type='text/css' media='all' />
+<link rel='stylesheet' id='grimlock-dark-mode-css'  href='cera css/style[8].css' type='text/css' media='all' />
+    <link rel='stylesheet' id='cera-style-css'  href='https://dark-mode.cera-theme.com/wp-content/themes/cera/style.css?ver=1.1.13' type='text/css' media='all' />
+   <%-- <link rel='stylesheet' id='cera-style-css'  href='cera css/style[9].css' type='text/css' media='all' />--%>
+<link rel='stylesheet' id='jquery-ui-search-css'  href='cera css/jquery-ui.min[2].css' type='text/css' media='all' />
+<link rel='stylesheet' id='buddypress-global-search-css'  href='cera css/buddypress-global-search.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='rt-mediaelement-css'  href='cera css/mediaelementplayer-legacy.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='rt-mediaelement-wp-css'  href='cera css/wp-mediaelement.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='rtmedia-main-css'  href='cera css/rtmedia.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='rtmedia-upload-terms-main-css'  href='cera css/rtm-upload-terms.min[1].css' type='text/css' media='all' />
+<link rel='stylesheet' id='kirki-styles-css'  href='cera css/fmgksui3.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/plupload/moxie.min.js?ver=1.3.5' id='moxiejs-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/plupload/plupload.min.js?ver=2.1.9' id='plupload-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='bp-confirm-js-extra'>
+    /* <![CDATA[ */
+    var BP_Confirm = { "are_you_sure": "Are you sure?" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=10.1.0' id='bp-confirm-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=10.1.0' id='bp-widget-members-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=10.1.0' id='bp-jquery-query-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.min.js?ver=10.1.0' id='bp-jquery-cookie-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.min.js?ver=10.1.0' id='bp-jquery-scroll-to-js'></script>
+<script type='text/javascript' id='bp-legacy-js-js-extra'>
+    /* <![CDATA[ */
+    var BP_DTheme = { "accepted": "Accepted", "close": "Close", "comments": "comments", "leave_group_confirm": "Are you sure you want to leave this group?", "mark_as_fav": "Favorite", "my_favs": "My Favorites", "rejected": "Rejected", "remove_fav": "Remove Favorite", "show_all": "Show all", "show_all_comments": "Show all comments for this thread", "show_x_comments": "Show all comments (%d)", "unsaved_changes": "Your profile has unsaved changes. If you leave the page, the changes will be lost.", "view": "View", "store_filter_settings": "" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.min.js?ver=10.1.0' id='bp-legacy-js-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-friends/js/widget-friends.min.js?ver=10.1.0' id='bp_core_widget_friends-js-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-groups/js/widget-groups.min.js?ver=10.1.0' id='groups_widget_groups_list-js-js'></script>
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=UA-207669565-10' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+    gtag('set', 'linker', { "domains": ["dark-mode.cera-theme.com"] });
+    gtag("js", new Date());
+    gtag("set", "developer_id.dZTNiMT", true);
+    gtag("config", "UA-207669565-10", { "anonymize_ip": true });
+    gtag("config", "G-BCPL7MB00M");
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="Cera JSON/wp-json.json" />
+<link rel="alternate" type="application/json" href="Cera JSON/3733.json" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="Cera XML/RSD.xml" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="Cera XML/RSD2.xml" /> 
+<%--<link rel="canonical" href="https://dark-mode.cera-theme.com/" />
+<link rel='shortlink' href='https://dark-mode.cera-theme.com/' />--%>
+<link rel="alternate" type="application/json+oembed" href="Cera JSON/embed.json" />
+<link rel="alternate" type="text/xml+oembed" href="Cera JSON/embed2.json" />
+
+	<%--<script type="text/javascript">var ajaxurl = 'https://dark-mode.cera-theme.com/wp-admin/admin-ajax.php';</script>--%>
+
+<meta name="generator" content="Site Kit by Google 1.70.0" />			<style type="text/css">
+							.rtmedia-activity-container ul.rtm-activity-media-list{
+			overflow: auto;
+			}
+
+			div.rtmedia-activity-container ul.rtm-activity-media-list li.media-type-document,
+			div.rtmedia-activity-container ul.rtm-activity-media-list li.media-type-other{
+			margin-left: 0.6em !important;
+			}
+
+			.rtmedia-activity-container li.media-type-video{
+			height: 240px !important;
+			width: 320px !important;
+			}
+
+			.rtmedia-activity-container li.media-type-video div.rtmedia-item-thumbnail,
+			.rtmedia-activity-container li.media-type-photo a{
+			width: 100% !important;
+			height: 98% !important;
+			}
+
+			.rtmedia-activity-container li.media-type-video div.rtmedia-item-thumbnail video{
+			width: 100% !important;
+			height: 100% !important;
+			}
+
+			.rtmedia-activity-container li.media-type-video div.rtmedia-item-thumbnail .mejs-video,
+			.rtmedia-activity-container li.media-type-video div.rtmedia-item-thumbnail .mejs-video video,
+			.rtmedia-activity-container li.media-type-video div.rtmedia-item-thumbnail .mejs-video .mejs-overlay-play{
+			width: 100% !important;
+			height: 100% !important;
+			}
+
+			.rtmedia-activity-container li.media-type-music{
+			width: 320px !important;
+			}
+
+			.rtmedia-activity-container li.media-type-music .rtmedia-item-thumbnail,
+			.rtmedia-activity-container li.media-type-music .rtmedia-item-thumbnail .mejs-audio,
+			.rtmedia-activity-container li.media-type-music .rtmedia-item-thumbnail audio{
+			width: 100% !important;
+			}
+
+			.rtmedia-activity-container li.media-type-photo{
+			width: 320px !important;
+			height: 240px !important;
+			}
+
+			.rtmedia-activity-container .media-type-photo .rtmedia-item-thumbnail,
+			.rtmedia-activity-container .media-type-photo .rtmedia-item-thumbnail img {
+			width: 100% !important;
+			height: 100% !important;
+			overflow: hidden;
+			}
+						#buddypress ul.activity-list li.activity-item .activity-comments ul li form.ac-form .rtmedia-comment-media-upload,#buddypress ul.activity-list li.activity-item .activity-comments ul li form.ac-form .rtmedia-container {
+					display: none !important
+				}
+					.rtmedia-container ul.rtmedia-list li.rtmedia-list-item div.rtmedia-item-thumbnail {
+		width: 150px;
+		max-height: 150px;
+		}
+		.rtmedia-container ul.rtmedia-list li.rtmedia-list-item div.rtmedia-item-thumbnail img {
+		max-width: 150px;
+		max-height: 150px;
+		}
+		.rtmedia-container .rtmedia-list  .rtmedia-list-item {
+		width: 150px;
+		}
+					</style>
+			<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f0f3f4; }
+</style>
+	<link rel="icon" href="https://dark-mode.cera-theme.com/wp-content/uploads/sites/15/2019/10/cropped-favicon-2-100x100.png" sizes="32x32" />
+<link rel="icon" href="https://dark-mode.cera-theme.com/wp-content/uploads/sites/15/2019/10/cropped-favicon-2-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://dark-mode.cera-theme.com/wp-content/uploads/sites/15/2019/10/cropped-favicon-2-300x300.png" />
+<meta name="msapplication-TileImage" content="https://dark-mode.cera-theme.com/wp-content/uploads/sites/15/2019/10/cropped-favicon-2-300x300.png" />
+<style>#blogs-personal-li { display: none !important; } .doc-permissions-toggle, table .attachment-clip-cell {display: none !important;} #doc-attachments { cursor: not-allowed; opacity: 0.5; } #doc-attachments > * { pointer-events: none; } #settings-form {
+	cursor: not-allowed !important;
+}
+#settings-form input {
+	pointer-events: none !important;
+	opacity: .5 !important;
+}</style><style>#pmpro_levels_table:before {
+    content: 'These are dummy pricing plans that aim to show what is possible to do. This has nothing to do with the pricing policy of the Cera theme.';
+    display: block;
+    background: rgba(0, 0, 0, 0.08);
+    width: 100%;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: .9em;
+    font-style: italic;
+    opacity: .8;
+}</style><style>#alphabetical-groups, .yz-navbar-item a[href*="/blogs"] { display: none !important; }</style></head>
+
+<body data-rsssl=1 ng-controller="myController" class="home-page bp-legacy home page-template page-template-template-full-width-no-header page-template-template-full-width-no-header-php page page-id-3733 custom-background wp-custom-logo wp-embed-responsive grimlock grimlock--classic grimlock--navigation-fixed-left grimlock--navigation-inside-top grimlock--navigation-fixed grimlock--back-to-top-right grimlock--back-to-top-displayed grimlock--loader-fadein-displayed grimlock--page grimlock-buddypress--members-counts-displayed grimlock-buddypress--bps-form-labels-displayed grimlock-buddypress--members-items-layout-2-2-2-2-2-cols-classic grimlock-buddypress--profile-secondary-nav-mobile-text-displayed grimlock-buddypress--profile-nav-mobile-default-state-closed grimlock-buddypress--groups-counts-displayed grimlock-buddypress--groups-items-layout-3-3-3-3-cols-classic grimlock--navigation-login-displayed group-blog mobile no-js ">
+
+
+
+<a class="skip-link screen-reader-text sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<div id="site-wrapper">
+							<div id="slideout-backdrop" class="grimlock-slideout-backdrop grimlock-slideout-close slideout-backdrop slideout-close"></div>
+
+						<div id="slideout-wrapper" class="grimlock-slideout-wrapper slideout-wrapper">
+										<nav id="vertical-navigation" class="grimlock-vertical-navigation main-navigation grimlock-vertical-navbar vertical-navbar" style="border-color:transparent;border-style:solid;border-width:0;color:#ffffff;" >
+			<div class="navbar-wrapper">
+							<div class="vertical-navbar-brand">
+				            <div class="site-branding grimlock-site_identity">
+                                <div class="grimlock-section__header section__header">
+
+                                                          <h2 class="grimlock-section__title section__title grimlock-display-3 display-3" style="color: rgb(255, 255, 255);">Kommunitz            </h2>
+                                </div><!-- navbar-brand__logo -->
+					            </div><!-- .site-branding -->
+						<button id="navbar-toggler-mini" class="navbar-toggler collapsed d-none d-lg-flex" type="button">
+					<i class="cera-icon cera-menu-arrow"></i>
+				</button>
+				<button id="navbar-toggler-mobile" class="navbar-toggler slideout-close d-lg-none" type="button">
+					<span></span>
+				</button>
+			</div><!-- .vertical-navbar-brand -->
+										<div class="grimlock-vertical-navbar-search grimlock-navbar-search vertical-navbar-search navbar-search">
+					
+<form role="search" method="get" class="search-form form-inline" action="SearchResults.aspx">
+	<div class="form-group">
+		<label class="sr-only">
+			<span class="screen-reader-text sr-only">Search everything...</span>
+		</label>
+		<input type="search" class="search-field form-control" placeholder="Search everything..."  title="Search for:" value="" name="s"/>
+		<button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+	</div>
+    
+  
+        
+</form><!-- .search-form -->
+				</div><!-- .vertical-navbar-search -->
+					 <i class="mdi mdi-email"></i> &nbsp;&nbsp;&nbsp;
+		<ul class="grimlock-login-navbar_nav_menu vertical-navbar-nav sidebar-nav nav navbar-nav navbar-nav--login nav-pills nav-stacked grimlock-login--button-action-modal">
+			<li class="menu-item menu-item--login ">
+										<button type="button" class="btn btn-outline-primary" data-target="#grimlock-login-form-modal" data-toggle="modal">Login</button>
+									</li>
+					</ul>
+
+	
+			<ul class="nav navbar-nav navbar-nav--buddypress logged-out">
+
+				
+				<li class="menu-item menu-item-has-children ml-0 menu-item--profile has-groups_invites has-notifications">
+					
+						<a href="https://dark-mode.cera-theme.com/register/" class="menu-item--profile__link d-none d-lg-block ">
+							<span class="avatar-round-ratio"><span class="d-block pos-r h-100"><img class="img-fluid" src="https://dark-mode.cera-theme.com/wp-content/themes/cera/assets/images/avatars/user-avatar-thumb.png" alt=" avatar" /></span></span>
+						</a>
+
+						<ul id="menu-user-logged-out" class="sub-menu"><li id="menu-item-108" class="bp-menu bp-login-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-108"><a href="https://dark-mode.cera-theme.com/wp-login.php?redirect_to=https%3A%2F%2Fdark-mode.cera-theme.com%2F%3F_ga%3D2.239968651.922151999.1643409738-1506910821.1643409738"><i class="cera-icon cera-log-in"></i> Log In</a></li>
+</ul>				</li>
+			</ul>
+		<ul id="menu-primary" class="vertical-navbar-nav sidebar-nav nav navbar-nav navbar-nav--main-menu nav-pills nav-stacked">
+<li id="menu-item-1556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3733 current_page_item menu-item-1556"><a href="DemoHome2.aspx" aria-current="page"><i class="cera-icon cera-layout text-primary"></i> <span>Homepage</span></a></li>
+            <br />
+
+            <%--<asp:Panel ID="Panel1" runat="server" Visible="false">
+            <li >
+                
+<span style="font-size:13px" "float: right" "padding-right: 100%">
+<b>	&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admin Mode &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</span>
+<label class="switch" >
+  <input type="checkbox" id="Admin_chk" runat="server"  >
+    <%--<asp:CheckBox ID="Admin_chk" runat="server" />--%>
+<%--  <span class="slider round"></span>
+</label>
+                    
+
+
+		</li>
+		</asp:Panel>--%>
+
+<li id="menu-item-38" class="menu-item--title menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a href="DemoHome2.aspx">Community</a></li>
+<li id="menu-item-1697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1697"><a href="Messaging.aspx"><i class="cera-icon cera-heart text-primary"></i> <span>Social wall</span></a></li>
+<li id="menu-item-1702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1699"><a href="SelectInterest.aspx"><i class="cera-icon cera-globe text-primary"></i> <span>Select Interests!</span></a>
+<li id="menu-item-1700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1700"><a href="CreateKommunity.aspx"><i class="cera-icon cera-users text-primary"></i> <span>Create a Community!</span></a></li>
+            <li id="menu-item-1881" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1881"><a ID="Edit" href="EditProfile.aspx" runat="server" onclick="BtnEdit_ServerClick"><i class="cera-icon cera-alert-circle text-primary"></i> <span>Edit Profile</span> </a></li>
+<ul class="sub-menu">
+	<li id="menu-item-1597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1597"><a href="ContentPolicy.aspx">Content Policy</a></li>
+</ul>
+</ul>			</div><!-- .navbar-wrapper-->
+			</nav><!-- .vertical-navbar -->
+									</div><!-- .slideout-wrapper -->
+						
+	<div id="site">
+
+					<header id="header" class="grimlock-header site-header region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-0 grimlock-region--pb-0" style="border-top-color:transparent;border-top-style:solid;border-top-width:0;border-bottom-color:transparent;border-bottom-style:solid;border-bottom-width:0;"  >
+			
+
+                        <div class="grimlock-region__inner region__inner" >
+                <div class="grimlock-region__container region__container">
+                    <nav id="navigation" class="navbar-full grimlock-navigation site-navigation main-navigation grimlock-navbar navbar grimlock-navbar--fixed-left navbar--fixed-left grimlock-navbar--container-fluid navbar--container-fluid grimlock-navbar--hamburger hamburger-navbar" style="border-top-color: #eceeef; border-top-style: solid; border-top-width: 0; border-bottom-color: #E9EFF3; border-bottom-style: solid; border-bottom-width: 0; color: #ffffff;">
+
+                        <div class="navbar__container">
+
+                            <div class="navbar__header">
+                                <button id="navbar-hidden-toggler" class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navigation-hidden-collapse"><span></span></button>
+                                <button id="navbar-toggler" class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navigation-collapse">
+                                    <span></span>
+                                </button>
+
+                                <div class="navbar-brand">
+                                    <div class="site-branding grimlock-site_identity">
+                                        <div class="grimlock-section__header section__header">
+
+                                            <h4 class="grimlock-section__title section__title grimlock-display-2 display-2" style="color: rgb(255, 255, 255);">Kommunitz            </h4>
+                                        </div>
+                                       <%-- <div class="grimlock-site-logo grimlock-navbar-brand__logo site-logo navbar-brand__logo">
+                                            <a href="https://dark-mode.cera-theme.com/" class="custom-logo-link" rel="home" aria-current="page">
+                                                <img width="142" height="44" src="https://dark-mode.cera-theme.com/wp-content/uploads/sites/15/2019/10/logo.png" class="custom-logo" alt="Cera Dark Mode" /></a>
+                                        </div>--%>
+                                        <!-- navbar-brand__logo -->
+                                    </div>
+                                    <!-- .site-branding -->
+                                </div>
+                                <!-- .navbar-brand -->
+
+                            </div>
+                            <!-- .navbar__header -->
+
+                            <ul class="nav navbar-nav navbar-nav--search d-none d-lg-flex pr-5">
+                                <li class="menu-item">
+                                    <div class="navbar-search d-flex align-items-center">
+
+                                        <form role="search" method="get" class="search-form form-inline" action="SearchResults.aspx">
+                                            <div class="form-group">
+                                                <label class="sr-only">
+                                                    <span class="screen-reader-text sr-only">Search everything...</span>
+                                                </label>
+                                                <input type="search" class="search-field form-control ui-autocomplete-input" placeholder="Search everything..." title="Search for:" value="" name="s" />
+                                                <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </form>
+                                        <!-- .search-form -->
+                                    </div>
+                                    <!-- .navbar-search -->
+                                </li>
+                                <!-- .menu-item -->
+                            </ul>
+                            <!-- .navbar-nav -->
+
+                            <div class="hamburger-navbar-nav-menu-container d-none d-lg-flex col-auto pr-0">
+
+                                <ul class="nav navbar-nav navbar-nav--buddypress logged-out">
+
+
+                                    <li class="menu-item menu-item-has-children ml-0 menu-item--profile has-groups_invites has-notifications">
+
+                                        <a href="https://dark-mode.cera-theme.com/register/" class="menu-item--profile__link d-none d-lg-block ">
+                                            <span class="avatar-round-ratio"><span class="d-block pos-r h-100">
+                                                <img class="img-fluid" src="https://dark-mode.cera-theme.com/wp-content/themes/cera/assets/images/avatars/user-avatar-thumb.png" alt=" avatar" /></span></span>
+                                        </a>
+
+                                        <ul id="menu-user-logged-out-1" class="sub-menu">
+                                            <li class="bp-menu bp-login-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-108"><a href="https://dark-mode.cera-theme.com/wp-login.php?redirect_to=https%3A%2F%2Fdark-mode.cera-theme.com%2F%3F_ga%3D2.239968651.922151999.1643409738-1506910821.1643409738"><i class="cera-icon cera-log-in"></i>Log In</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                               <ul style="list-style-type:none;  padding-left:0px" >
+                                    <li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="bell"></i>
+									<span class="indicator">4</span>
+								</div>
+							</a>
+                                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"  style="overflow-y:scroll;height:400px;min-width: max-content;background-color: #fff;background-clip: padding-box;border: 1px solid rgba(0,0,0,.15);border-radius: .2rem;color: #495057;font-size: .875rem;list-style: none;margin: 0;padding: 0.5rem 0;position: absolute;text-align: left;z-index: 1000;" aria-labelledby="alertsDropdown" data-bs-popper="none">
+                                            <div class="dropdown-menu-header">
+									4 New Notifications
+								</div>
+								<div class="list-group" >
+                                        <asp:DataList ID="DataList1" runat="server" DataSourceID="sqlNotification">
+                                            <ItemTemplate>
+                                                	<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center" >
+											<div class="col-2">
+												<i class="text-warning" data-feather="bell"></i>
+											</div>
+											<div class="col-10">
+                                                       
+												<div class="text-dark"> <asp:Label ID="Label3" runat="server" Text='<%#Eval("Kommunity_Name")%>'></asp:Label></div>
+												<div class="text-muted small mt-1">aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+                                            </ItemTemplate>
+                                        </asp:DataList>
+                             <asp:SqlDataSource ID="sqlNotification" runat="server" ConnectionString="<%$ ConnectionStrings:cnSqlConn %>" SelectCommand="SELECT * FROM tblKommunities_Followed where Username='Kunal'"></asp:SqlDataSource>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-dark">Show all notifications</a>
+								</div>
+
+							</div>
+						</li>
+                                </ul>
+
+                                  <ul style="list-style-type:none; padding-left: 0px" >
+                                	<li class="dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="message-square"></i>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" style="min-width: max-content;background-color: #fff;background-clip: padding-box;border: 1px solid rgba(0,0,0,.15);border-radius: .2rem;color: #495057;font-size: .875rem;list-style: none;margin: 0;padding: 0.5rem 0;position: absolute;text-align: left;z-index: 1000;" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										4 New Messages
+									</div>
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+											</div>
+											<div class="col-10 ps-2">
+												<div class="text-dark">Vanessa Tucker</div>
+												<div class="text-dark">Nam pretium turpis et arcu. Duis arcu tortor.</div>
+												<div class="text-dark">15m ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+											</div>
+											<div class="col-10 ps-2">
+												<div class="text-dark">William Harris</div>
+												<div class="text-dark">Curabitur ligula sapien euismod vitae.</div>
+												<div class="text-dark">2h ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+											</div>
+											<div class="col-10 ps-2">
+												<div class="text-dark">Christina Mason</div>
+												<div class="text-dark">Pellentesque auctor neque nec urna.</div>
+												<div class="text-dark">4h ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+											</div>
+											<div class="col-10 ps-2">
+												<div class="text-dark">Sharon Lessman</div>
+												<div class="text-dark">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
+												<div class="text-dark">5h ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-dark">Show all messages</a>
+								</div>
+							</div>
+						</li>
+                                </ul>
+
+                                   <ul style="list-style-type:none; padding-left:0px" >
+                                				<li class="dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle" data-feather="settings"></i>
+              </a>
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                <span>
+                                                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></span>
+              </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Log out</a>
+							</div>
+						</li>
+                                    </ul>
+
+                               <%-- <ul class="grimlock-login-navbar_nav_menu hamburger-navbar-nav nav navbar-nav navbar-nav--hamburger-menu grimlock-login--button-action-modal">
+                                    <li class="menu-item menu-item--login ">
+                                        <button type="button" class="btn btn-outline-primary" data-target="#grimlock-login-form-modal" data-toggle="modal">Login</button>
+                                    </li>
+                                </ul>--%>
+
+                            </div>
+                            <!-- .collapse -->
+
+                        </div>
+                        <!-- .navbar__container -->
+
+                        <!-- TODO : Add condition to show only for hidden navigation layout option -->
+                        <div class="collapse navbar-collapse" id="navigation-hidden-collapse">
+                            <div class="navbar-collapse-content">
+
+                                <ul class="nav navbar-nav navbar-nav--buddypress logged-out">
+
+
+                                    <li class="menu-item menu-item-has-children ml-0 menu-item--profile has-groups_invites has-notifications">
+
+                                        <a href="https://dark-mode.cera-theme.com/register/" class="menu-item--profile__link d-none d-lg-block ">
+                                            <span class="avatar-round-ratio"><span class="d-block pos-r h-100">
+                                                <img class="img-fluid" src="https://dark-mode.cera-theme.com/wp-content/themes/cera/assets/images/avatars/user-avatar-thumb.png" alt=" avatar" /></span></span>
+                                        </a>
+
+                                        <ul id="menu-user-logged-out-2" class="sub-menu">
+                                            <li class="bp-menu bp-login-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-108"><a href="https://dark-mode.cera-theme.com/wp-login.php?redirect_to=https%3A%2F%2Fdark-mode.cera-theme.com%2F%3F_ga%3D2.239968651.922151999.1643409738-1506910821.1643409738"><i class="cera-icon cera-log-in"></i>Log In</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="grimlock-login-navbar_nav_menu hamburger-navbar-nav nav navbar-nav navbar-nav--hamburger-menu grimlock-login--button-action-modal">
+                                    <li class="menu-item menu-item--login ">
+                                        <button type="button" class="btn btn-outline-primary" data-target="#grimlock-login-form-modal" data-toggle="modal">Login</button>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- .navbar-collapse-content -->
+                        </div>
+                        <!-- .navbar-collapse -->
+
+                    </nav>
+                    <!-- .navbar -->
+                </div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</header><!-- .grimlock-region -->
+				
+		<div id="content" class="site-content region region--container-fluid region--container-classic" tabindex="-1">
+			<div class="region__container">
+				<div class="region__row">
+		
+                    <div id="primary" class="content-area region__col">
+                        <main id="main" class="site-main">
+
+			
+				<article id="post-3733" class="post-3733 page type-page status-publish hentry">
+						<div class="grimlock--page-content entry-content clearfix">
+			<div  class=" wp-block-grimlock-buddypress-groups-section grimlock-buddypress-groups-section--btn-link grimlock-buddypress-groups-section--our-awesome-communities alignfull widget region grimlock-region grimlock-region--mt-0 grimlock-region--mb-0 grimlock-region--pt-6 grimlock-region--pb-6 grimlock-region--12-cols-left region--12-cols-left grimlock-region--container-fluid region--container-fluid grimlock-section section grimlock-buddypress-groups-section section_groups_reveal" style="border-top-color:#eceeef;border-top-style:solid;border-top-width:0;border-bottom-color:#eceeef;border-bottom-style:solid;border-bottom-width:0;z-index:0;--grimlock-dark-mode-section-background-color:rgba(0, 0, 0, 0.08);--grimlock-dark-mode-section-content-background-color:#ffffff;--grimlock-dark-mode-section-border-top-color:#eceeef;--grimlock-dark-mode-section-border-bottom-color:#eceeef;--grimlock-dark-mode-section-title-color:#ffffff;--grimlock-dark-mode-section-subtitle-color:#ffffff;--grimlock-dark-mode-section-color:#ffffff;"  data-grimlock-animate-scroll-reveal="{&quot;origin&quot;:&quot;top&quot;,&quot;distance&quot;:0,&quot;selector&quot;:&quot;.section__header, ul#groups-list &gt; li, .section__footer&quot;,&quot;duration&quot;:750,&quot;interval&quot;:50,&quot;delay&quot;:500,&quot;rotate&quot;:{&quot;x&quot;:0,&quot;y&quot;:0,&quot;z&quot;:0},&quot;opacity&quot;:0,&quot;scale&quot;:1,&quot;easing&quot;:&quot;cubic-bezier(0.6, 0.2, 0.1, 1)&quot;,&quot;viewFactor&quot;:0.5,&quot;mobile&quot;:false,&quot;reset&quot;:false}">
+			<div class="region__inner" style="padding-top:6%;padding-bottom:6%;background-color:rgb(246, 248, 249);">
+				<div class="region__container">
+					<div class="region__row" style="justify-content:center">
+						<div class="region__col">
+								        <div class="grimlock-section__header section__header">
+				
+           
+				        </div><!-- .section__header -->
+
+                    <input type="hidden" id="_wpnonce-groups" name="_wpnonce-groups" value="aa9c7c0d00" /><input type="hidden" name="_wp_http_referer" value="/?_ga=2.239968651.922151999.1643409738-1506910821.1643409738" />                    <input type="hidden" name="groups_widget_max" id="groups_widget_max" value="8" />
+
+                
+		    			</div><!-- .section__content -->
+                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></asp:ContentPlaceHolder>
+                             <%--<div class="grimlock-section__footer section__footer">
+	            
+            <a href="/members/" class="grimlock-section__btn grimlock-section__btn--1 section__btn btn grimlock-btn-link btn-link" target="_blank">
+	            View All Groups            </a>
+				            	        </div>--%>
+									</div><!-- .region__col -->
+					</div><!-- .region__row -->
+				</div><!-- .region__container -->
+			</div><!-- .region__inner -->
+			</div><!-- .grimlock-section -->
+
+                    </div><!-- .entry-content -->
+					</article><!-- #post-## -->
+
+				
+		</main>
+                        <!-- #main -->
+                    </div><!-- #primary -->
+
+
+							</div><!-- .region__row -->
+			</div><!-- .region__container -->
+		</div><!-- #content -->
+		</div><!-- #site -->
+
+		            <a id="back_to_top_button" class="btn-back-to-top grimlock-back_to_top_button" href="#site"><i class="fa fa-angle-up fa-2x"></i></a>
+			
+	</div><!-- #site-wrapper -->
+
+
+		<div class="modal fade" id="grimlock-login-form-modal" tabindex="-1" role="dialog" aria-labelledby="grimlock-login-form-modal-title" aria-hidden="true">
+	
+		</div>
+
+			<button id="btnDarkMode" class="btn btn-secondary grimlock-dark-mode__toggle grimlock-dark-mode__toggle--bottom-left"></button>
+		<link rel='stylesheet' id='author-avatars-shortcode-css'  href='Cera CSS/shortcode[1].css' type='text/css' media='all' />
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/underscore.min.js?ver=1.13.1' id='underscore-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/backbone.min.js?ver=1.4.0' id='backbone-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress-media/lib/media-element/wp-mediaelement.min.js?ver=4.6.10' id='rt-mediaelement-wp-js'></script>
+<script type='text/javascript' id='rtmedia-main-js-extra'>
+    /* <![CDATA[ */
+    var rtmedia_bp = { "bp_template_pack": "legacy" };
+    var RTMedia_Main_JS = { "media_delete_confirmation": "Are you sure you want to delete this media?", "rtmedia_ajaxurl": "https:\/\/dark-mode.cera-theme.com\/wp-admin\/admin-ajax.php", "media_delete_success": "Media file deleted successfully." };
+    var rtmedia_main_js_strings = { "rtmedia_albums": "Albums", "privacy_update_success": "Privacy updated successfully.", "privacy_update_error": "Couldn't change privacy, please try again." };
+    var rtmedia_media_size_config = { "photo": { "thumb": { "width": 150, "height": 150, "crop": 1 }, "medium": { "width": 320, "height": 240, "crop": 1 }, "large": { "width": 800, "height": 0, "crop": 1 } }, "video": { "activity_media": { "width": 320, "height": 240 }, "single_media": { "width": 640, "height": 480 } }, "music": { "activity_media": { "width": 320 }, "single_media": { "width": 640 } }, "featured": { "default": { "width": 100, "height": 100, "crop": 1 } } };
+    var rtmedia_main = { "rtmedia_ajax_url": "https:\/\/dark-mode.cera-theme.com\/wp-admin\/admin-ajax.php", "rtmedia_media_slug": "media", "rtmedia_lightbox_enabled": "1", "rtmedia_direct_upload_enabled": "0", "rtmedia_gallery_reload_on_upload": "1", "rtmedia_empty_activity_msg": "Please enter some content to post.", "rtmedia_empty_comment_msg": "Empty comment is not allowed.", "rtmedia_media_delete_confirmation": "Are you sure you want to delete this media?", "rtmedia_media_comment_delete_confirmation": "Are you sure you want to delete this comment?", "rtmedia_album_delete_confirmation": "Are you sure you want to delete this Album?", "rtmedia_drop_media_msg": "Drop files here", "rtmedia_album_created_msg": " album created successfully.", "rtmedia_something_wrong_msg": "Something went wrong. Please try again.", "rtmedia_empty_album_name_msg": "Enter an album name.", "rtmedia_max_file_msg": "Max file Size Limit: ", "rtmedia_allowed_file_formats": "Allowed File Formats", "rtmedia_select_all_visible": "Select All Visible", "rtmedia_unselect_all_visible": "Unselect All Visible", "rtmedia_no_media_selected": "Please select some media.", "rtmedia_selected_media_delete_confirmation": "Are you sure you want to delete the selected media?", "rtmedia_selected_media_move_confirmation": "Are you sure you want to move the selected media?", "rtmedia_waiting_msg": "Waiting", "rtmedia_uploaded_msg": "Uploaded", "rtmedia_uploading_msg": "Uploading", "rtmedia_upload_failed_msg": "Failed", "rtmedia_close": "Close", "rtmedia_edit": "Edit", "rtmedia_delete": "Delete", "rtmedia_edit_media": "Edit Media", "rtmedia_remove_from_queue": "Remove from queue", "rtmedia_add_more_files_msg": "Add more files", "rtmedia_file_extension_error_msg": "File not supported", "rtmedia_more": "more", "rtmedia_less": "less", "rtmedia_read_more": "Read more", "rtmedia__show_less": "Show less", "rtmedia_activity_text_with_attachment": "disable", "rtmedia_delete_uploaded_media": "This media is uploaded. Are you sure you want to delete this media?", "rtm_wp_version": "5.9.2", "rtmedia_masonry_layout": "false", "rtmedia_disable_media_in_commented_media": "1", "rtmedia_disable_media_in_commented_media_text": "Adding media in Comments is not allowed" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress-media/app/assets/js/rtmedia.min.js?ver=4.6.10' id='rtmedia-main-js'></script>
+<script type='text/javascript' id='rtmedia-backbone-js-extra'>
+    /* <![CDATA[ */
+    var rtmedia_template = { "template_url": "https:\/\/dark-mode.cera-theme.com\/wp-admin\/admin-ajax.php?action=rtmedia_get_template&template=media-gallery-item" };
+    var rtMedia_plupload = { "rtMedia_plupload_config": { "url": "\/upload\/?_ga=2.41380450.1308120821.1648410129-1561230230.1648410129", "runtimes": "html5,flash,html4", "browse_button": "rtMedia-upload-button", "container": "rtmedia-upload-container", "drop_element": "drag-drop-area", "filters": [{ "title": "Media Files", "extensions": "jpg,jpeg,png,gif,mp4,mp3" }], "max_file_size": "1.46484375M", "multipart": true, "urlstream_upload": true, "flash_swf_url": "https:\/\/dark-mode.cera-theme.com\/wp-includes\/js\/plupload\/plupload.flash.swf", "silverlight_xap_url": "https:\/\/dark-mode.cera-theme.com\/wp-includes\/js\/plupload\/plupload.silverlight.xap", "file_data_name": "rtmedia_file", "multi_selection": true, "multipart_params": { "redirect": "no", "redirection": "false", "action": "wp_handle_upload", "_wp_http_referer": "\/?_ga=2.41380450.1308120821.1648410129-1561230230.1648410129", "mode": "file_upload", "rtmedia_upload_nonce": "b0e00c8f86" }, "max_file_size_msg": "1.46484375M" } };
+    var rtmedia_media_thumbs = { "photo": "https:\/\/dark-mode.cera-theme.com\/wp-content\/plugins\/buddypress-media\/app\/assets\/admin\/img\/image_thumb.png", "video": "https:\/\/dark-mode.cera-theme.com\/wp-content\/plugins\/buddypress-media\/app\/assets\/admin\/img\/video_thumb.png", "music": "https:\/\/dark-mode.cera-theme.com\/wp-content\/plugins\/buddypress-media\/app\/assets\/admin\/img\/audio_thumb.png" };
+    var rtmedia_edit_media_info_upload = { "title": "Title:", "description": "Description:" };
+    var rtmedia_bp = { "bp_template_pack": "legacy" };
+    var rtmedia_backbone_strings = { "rtm_edit_file_name": "Edit File Name" };
+    var rtmedia_exteansions = { "photo": ["jpg", "jpeg", "png", "gif"], "video": ["mp4"], "music": ["mp3"] };
+    var rtMedia_update_plupload_comment = { "url": "\/upload\/?_ga=2.41380450.1308120821.1648410129-1561230230.1648410129", "runtimes": "html5,flash,html4", "browse_button": "rtmedia-comment-media-upload", "container": "rtmedia-comment-media-upload-container", "filters": [{ "title": "Media Files", "extensions": "jpg,jpeg,png,gif,mp4,mp3" }], "max_file_size": "1.46484375M", "multipart": "1", "urlstream_upload": "1", "flash_swf_url": "https:\/\/dark-mode.cera-theme.com\/wp-includes\/js\/plupload\/plupload.flash.swf", "silverlight_xap_url": "https:\/\/dark-mode.cera-theme.com\/wp-includes\/js\/plupload\/plupload.silverlight.xap", "file_data_name": "rtmedia_file", "multi_selection": "", "multipart_params": { "redirect": "no", "redirection": "false", "action": "wp_handle_upload", "_wp_http_referer": "\/?_ga=2.41380450.1308120821.1648410129-1561230230.1648410129", "mode": "file_upload", "rtmedia_upload_nonce": "b0e00c8f86" }, "max_file_size_msg": "100M" };
+    var rtmedia_backbone = { "rMedia_loading_media": "https:\/\/dark-mode.cera-theme.com\/wp-content\/plugins\/buddypress-media\/app\/assets\/admin\/img\/boxspinner.gif", "rtmedia_set_featured_image_msg": "Featured media set successfully.", "rtmedia_unset_featured_image_msg": "Featured media removed successfully.", "rtmedia_no_media_found": "Oops !! There's no media found for the request !!", "rtmedia_load_more_or_pagination": "load_more", "rtmedia_bp_enable_activity": "1", "rtmedia_upload_progress_error_message": "There are some uploads in progress. Do you want to cancel them?", "rtmedia_media_disabled_error_message": "Media upload is disabled. Please Enable at least one media type to proceed.", "rMedia_loading_file": "https:\/\/dark-mode.cera-theme.com\/wp-admin\/images\/loading.gif" };
+    var rtMedia_activity = { "is_album": "", "is_edit_allowed": "" };
+    var rtMedia_update_plupload_config = { "url": "\/upload\/?_ga=2.41380450.1308120821.1648410129-1561230230.1648410129", "runtimes": "html5,flash,html4", "browse_button": "rtmedia-add-media-button-post-update", "container": "rtmedia-whts-new-upload-container", "drop_element": "whats-new-textarea", "filters": [{ "title": "Media Files", "extensions": "jpg,jpeg,png,gif,mp4,mp3" }], "max_file_size": "1.46484375M", "multipart": "1", "urlstream_upload": "1", "flash_swf_url": "https:\/\/dark-mode.cera-theme.com\/wp-includes\/js\/plupload\/plupload.flash.swf", "silverlight_xap_url": "https:\/\/dark-mode.cera-theme.com\/wp-includes\/js\/plupload\/plupload.silverlight.xap", "file_data_name": "rtmedia_file", "multi_selection": "1", "multipart_params": { "redirect": "no", "redirection": "false", "rtmedia_update": "true", "action": "wp_handle_upload", "_wp_http_referer": "\/?_ga=2.41380450.1308120821.1648410129-1561230230.1648410129", "mode": "file_upload", "rtmedia_upload_nonce": "b0e00c8f86" }, "max_file_size_msg": "100M" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress-media/app/assets/js/rtMedia.backbone.js?ver=4.6.10' id='rtmedia-backbone-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery.caret.min.js?ver=10.1.0' id='jquery-caret-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery.atwho.min.js?ver=10.1.0' id='jquery-atwho-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress/bp-activity/js/mentions.min.js?ver=10.1.0' id='bp-mentions-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/comment-reply.min.js?ver=5.9.2' id='comment-reply-js'></script>
+<script type='text/javascript' id='rocket-browser-checker-js-after'>
+    "use strict"; var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor) } } return function (Constructor, protoProps, staticProps) { return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor } }(); function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function") } var RocketBrowserCompatibilityChecker = function () { function RocketBrowserCompatibilityChecker(options) { _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options } return _createClass(RocketBrowserCompatibilityChecker, [{ key: "_checkPassiveOption", value: function (self) { try { var options = { get passive() { return !(self.passiveSupported = !0) } }; window.addEventListener("test", null, options), window.removeEventListener("test", null, options) } catch (err) { self.passiveSupported = !1 } } }, { key: "initRequestIdleCallback", value: function () { !1 in window && (window.requestIdleCallback = function (cb) { var start = Date.now(); return setTimeout(function () { cb({ didTimeout: !1, timeRemaining: function () { return Math.max(0, 50 - (Date.now() - start)) } }) }, 1) }), !1 in window && (window.cancelIdleCallback = function (id) { return clearTimeout(id) }) } }, { key: "isDataSaverModeOn", value: function () { return "connection" in navigator && !0 === navigator.connection.saveData } }, { key: "supportsLinkPrefetch", value: function () { var elem = document.createElement("link"); return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype } }, { key: "isSlowConnection", value: function () { return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType) } }]), RocketBrowserCompatibilityChecker }();
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-extra'>
+    /* <![CDATA[ */
+    var RocketPreloadLinksConfig = { "excludeUris": "\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php|\/refer\/|\/go\/|\/recommend\/|\/recommends\/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm", "siteUrl": "https:\/\/dark-mode.cera-theme.com", "onHoverDelay": "100", "rateThrottle": "3" };
+    /* ]]> */
+</script>
+<script type='text/javascript' id='rocket-preload-links-js-after'>
+    (function () {
+        "use strict"; var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) { return typeof e } : function (e) { return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e }, e = function () { function i(e, t) { for (var n = 0; n < t.length; n++) { var i = t[n]; i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i) } } return function (e, t, n) { return t && i(e.prototype, t), n && i(e, n), e } }(); function i(e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") } var t = function () { function n(e, t) { i(this, n), this.browser = e, this.config = t, this.options = this.browser.options, this.prefetched = new Set, this.eventTime = null, this.threshold = 1111, this.numOnHover = 0 } return e(n, [{ key: "init", value: function () { !this.browser.supportsLinkPrefetch() || this.browser.isDataSaverModeOn() || this.browser.isSlowConnection() || (this.regex = { excludeUris: RegExp(this.config.excludeUris, "i"), images: RegExp(".(" + this.config.imageExt + ")$", "i"), fileExt: RegExp(".(" + this.config.fileExt + ")$", "i") }, this._initListeners(this)) } }, { key: "_initListeners", value: function (e) { -1 < this.config.onHoverDelay && document.addEventListener("mouseover", e.listener.bind(e), e.listenerOptions), document.addEventListener("mousedown", e.listener.bind(e), e.listenerOptions), document.addEventListener("touchstart", e.listener.bind(e), e.listenerOptions) } }, { key: "listener", value: function (e) { var t = e.target.closest("a"), n = this._prepareUrl(t); if (null !== n) switch (e.type) { case "mousedown": case "touchstart": this._addPrefetchLink(n); break; case "mouseover": this._earlyPrefetch(t, n, "mouseout") } } }, { key: "_earlyPrefetch", value: function (t, e, n) { var i = this, r = setTimeout(function () { if (r = null, 0 === i.numOnHover) setTimeout(function () { return i.numOnHover = 0 }, 1e3); else if (i.numOnHover > i.config.rateThrottle) return; i.numOnHover++, i._addPrefetchLink(e) }, this.config.onHoverDelay); t.addEventListener(n, function e() { t.removeEventListener(n, e, { passive: !0 }), null !== r && (clearTimeout(r), r = null) }, { passive: !0 }) } }, { key: "_addPrefetchLink", value: function (i) { return this.prefetched.add(i.href), new Promise(function (e, t) { var n = document.createElement("link"); n.rel = "prefetch", n.href = i.href, n.onload = e, n.onerror = t, document.head.appendChild(n) }).catch(function () { }) } }, { key: "_prepareUrl", value: function (e) { if (null === e || "object" !== (void 0 === e ? "undefined" : r(e)) || !1 in e || -1 === ["http:", "https:"].indexOf(e.protocol)) return null; var t = e.href.substring(0, this.config.siteUrl.length), n = this._getPathname(e.href, t), i = { original: e.href, protocol: e.protocol, origin: t, pathname: n, href: t + n }; return this._isLinkOk(i) ? i : null } }, { key: "_getPathname", value: function (e, t) { var n = t ? e.substring(this.config.siteUrl.length) : e; return n.startsWith("/") || (n = "/" + n), this._shouldAddTrailingSlash(n) ? n + "/" : n } }, { key: "_shouldAddTrailingSlash", value: function (e) { return this.config.usesTrailingSlash && !e.endsWith("/") && !this.regex.fileExt.test(e) } }, { key: "_isLinkOk", value: function (e) { return null !== e && "object" === (void 0 === e ? "undefined" : r(e)) && (!this.prefetched.has(e.href) && e.origin === this.config.siteUrl && -1 === e.href.indexOf("?") && -1 === e.href.indexOf("#") && !this.regex.excludeUris.test(e.href) && !this.regex.images.test(e.href)) } }], [{ key: "run", value: function () { "undefined" != typeof RocketPreloadLinksConfig && new n(new RocketBrowserCompatibilityChecker({ capture: !0, passive: !0 }), RocketPreloadLinksConfig).init() } }]), n }(); t.run();
+    }());
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock/assets/js/navigation-dropdown.js?ver=1.4.10' id='grimlock-navigation-dropdown-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock/assets/js/vendor/slideout.js?ver=0.1.12' id='slideout-js'></script>
+<script type='text/javascript' id='grimlock-vertical-navigation-js-extra'>
+    /* <![CDATA[ */
+    var grimlock_vertical_navigation = { "on_left": "1", "padding": "256" };
+    var grimlock_vertical_navigation = { "on_left": "1", "padding": "256" };
+    var grimlock_vertical_navigation = { "on_left": "1", "padding": "256" };
+    /* ]]> */
+</script>
+ <script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock/assets/js/vertical-navigation.js?ver=1.4.10' id='grimlock-vertical-navigation-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock/assets/js/navigation-search.js?ver=1.4.10' id='grimlock-navigation-search-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock/assets/js/back-to-top-button.js?ver=1.4.10' id='grimlock-back-to-top-button-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock-login/assets/js/main.js?ver=1.1.10' id='grimlock-login-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock-animate/assets/js/vendor/jquery.parallax.min.js?ver=2.0.0-alpha' id='parallax.js-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock-animate/assets/js/vendor/scrollreveal.js?ver=3.4.0' id='scrollreveal-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock-animate/assets/js/main.js?ver=1.1.8' id='grimlock-animate-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/jquery/ui/effect.min.js?ver=1.13.1' id='jquery-effects-core-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/jquery/ui/effect-drop.min.js?ver=1.13.1' id='jquery-effects-drop-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock-buddypress/assets/js/vendor/hammer.min.js?ver=2.0.7' id='hammerjs-js'></script>
+<script type='text/javascript' id='grimlock-buddypress-js-extra'>
+    /* <![CDATA[ */
+    var grimlock_buddypress = { "priority_nav_dropdown_breakpoint_label": "Menu", "notifications_list_empty": "You have no new notification", "ajax_url": "https:\/\/dark-mode.cera-theme.com\/wp-admin\/admin-ajax.php" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock-buddypress/assets/js/main.js?ver=1.4.8' id='grimlock-buddypress-js'></script>
+<script type='text/javascript' id='grimlock-dark-mode-js-extra'>
+    /* <![CDATA[ */
+    var grimlockDarkMode = { "autodetect": "" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/grimlock-dark-mode/assets/js/main.js?ver=1.0.2' id='grimlock-dark-mode-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/themes/cera/assets/js/skip-link-focus-fix.min.js?ver=20130115' id='cera-skip-link-focus-fix-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/themes/cera/assets/js/vendor/popper.min.js?ver=1.14.3' id='popper-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/themes/cera/assets/js/vendor/bootstrap.min.js?ver=4.1.3' id='bootstrap-js'></script>
+<script type='text/javascript' id='cera-js-extra'>
+    /* <![CDATA[ */
+    var cera = { "priority_nav_dropdown_label": "More", "priority_nav_dropdown_breakpoint_label_menu": "Menu", "priority_nav_dropdown_breakpoint_label_categories": "Categories", "priority_nav_dropdown_breakpoint_label_tags": "Tags", "priority_nav_dropdown_breakpoint_label_formats": "Formats" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/themes/cera/assets/js/main.min.js?ver=1.1.13' id='cera-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.1' id='jquery-ui-menu-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/dist/dom-ready.min.js?ver=ecda74de0221e1c2ce5c57cbb5af09d5' id='wp-dom-ready-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/dist/hooks.min.js?ver=1e58c8c5a32b2e97491080c5b10dc71c' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/dist/i18n.min.js?ver=30fcecb428a0e8383d3776bcdd3a7834' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+    wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+</script>
+<script type='text/javascript' id='wp-a11y-js-translations'>
+    (function (domain, translations) {
+        var localeData = translations.locale_data[domain] || translations.locale_data.messages;
+        localeData[""].domain = domain;
+        wp.i18n.setLocaleData(localeData, domain);
+    })("default", { "locale_data": { "messages": { "": {} } } });
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/dist/a11y.min.js?ver=68e470cf840f69530e9db3be229ad4b6' id='wp-a11y-js'></script>
+<script type='text/javascript' id='jquery-ui-autocomplete-js-extra'>
+    /* <![CDATA[ */
+    var uiAutocompleteL10n = { "noResults": "No results found.", "oneResult": "1 result found. Use up and down arrow keys to navigate.", "manyResults": "%d results found. Use up and down arrow keys to navigate.", "itemSelected": "Item selected." };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.1' id='jquery-ui-autocomplete-js'></script>
+<script type='text/javascript' id='buddypress-global-search-js-extra'>
+    /* <![CDATA[ */
+    var BBOSS_GLOBAL_SEARCH = { "nonce": "b51c905072", "action": "bboss_global_search_ajax", "debug": "1", "ajaxurl": "https:\/\/dark-mode.cera-theme.com\/wp-admin\/admin-ajax.php", "loading_msg": "Loading Suggestions", "enable_ajax_search": "yes", "per_page": "5" };
+    /* ]]> */
+</script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress-global-search/assets/js/buddypress-global-search.min.js?ver=1.2.1' id='buddypress-global-search-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress-media/lib/media-element/mediaelement-and-player.min.js?ver=4.6.10' id='rt-mediaelement-js'></script>
+<script type='text/javascript' src='https://dark-mode.cera-theme.com/wp-content/plugins/buddypress-media/lib/touchswipe/jquery.touchSwipe.min.js?ver=4.6.10' id='rtmedia-touchswipe-js'></script>
+           <script>
+               $(document).ready(function () {
+                   document.getElementById("btnDarkMode").click();
+                   document.getElementById("navbar-toggler-mini").click();
+               });
+
+    </script>
+    
+	<script src="js/app.js"></script>
+
+</body>
+</html>

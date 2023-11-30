@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.main::before {
+  content: "";
+  height: 50vh;
+  width: 100%;
+  background-color: #33334c;
+  position: absolute;
+  z-index: 111;
+  top: 0;
+  left: 0;
+}
+
+.table {
+  background-color: white;
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.name {
+  text-align: left;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  font-size: 1.4rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.text-main {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkslategrey;
+}
+
+.link {
+  font-family: sans-serif;
+}
+
+.link:hover {
+  background-color: #ee4c50;
+  transition: 0.2s ease-in;
+  transform-origin: bottom;
+  color: #eee !important;
+}
+
+.date {
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.money {
+  font-family: monospace;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="table">
+            <table role="presentation" style="border:2px solid #eee;width: 100%; border-collapse: collapse; border: 0; border-spacing: 0; background: #ffffff">
+                <tr>
+                    <td align="center" style="padding: 0">
+                        <table role="presentation" style="width: 602px; border-collapse: collapse; border: 1px solid #eee; border-spacing: 0; text-align: left">
+                            <tr>
+                                <h4 class="name" id="name">Hey [Username],</h4>
+                            </tr>
+                            <tr>
+                                <td style="padding: 36px 30px 42px 30px">
+                                    <table role="presentation" style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0">
+                                        <tr>
+                                            <td style="padding: 0 0 36px 0; color: #153643">
+                                                <h1 style="font-size: 24px; margin: 0 0 20px 0; font-family: Arial, sans-serif">Verify your E-Mail,</h1>
+                                                <p class="text-main" style="margin: 0 0 12px 0; font-size: 16px; line-height: 24px;">
+                                                    Ayee! Thanks for registering an account with Kommunitz! You're one wholesome person to hang around with. :D (There are very few wholesome people in the world). Before we get started, we'll need to verify your email which you can find at the end of this Section.
+                                                </p>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 0">
+                                                <table role="presentation" style="margin:auto; width: 100%; border-collapse: collapse; border: 0; border-spacing: 0">
+                                                    <tr style="display: flex;justify-content: center;width: 100%;">
+                                                        <td style="margin:auto; width: 260px; padding: 0; vertical-align: top; color: #153643"> </td>
+                                                        <center>
+                                                            <h2>
+                                                                [OTP]
+                                                            </h2>
+                                                        </center>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 30px; background: #33334c">
+                                    <table role="presentation" style="width: 100%; border-collapse: collapse; border: 0; border-spacing: 0; font-size: 9px; font-family: Arial, sans-serif">
+                                        <tr>
+                                            <td style="padding: 0; width: 50%" align="left">
+                                                <p style="margin: 0; font-size: 14px; line-height: 16px; font-family: Arial, sans-serif; color: #ffffff">&reg; Kommunitz<br /><a href="https://purposeblacketh.com" style="color: #ffffff; text-decoration: underline"></a></p>
+                                            </td>
+                                            <td style="padding: 0; width: 50%" align="right">
+                                                <table role="presentation" style="border-collapse: collapse; border: 0; border-spacing: 0">
+                                                    <tr>
+                                                        <td style="padding: 0 0 0 10px; width: 38px"><a target="_blank" href="https://codepen.com/hanibal" style="color: #ffffff"><img src="https://s2.svgbox.net/social.svg?ic=codepen" width="32" height="32" /></a></td>
+                                                        <td style="padding: 0 0 0 10px; width: 38px"><a target="_blank" href="https://github.com/hanibalgirmay/" style="color: #ffffff"><img src="https://s2.svgbox.net/social.svg?ic=github" width="32" height="32" /></a></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

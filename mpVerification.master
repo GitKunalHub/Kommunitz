@@ -1,0 +1,261 @@
+﻿<%@ Master Language="VB" CodeFile="mpVerification.master.vb" Inherits="mpVerification" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Raleway:200");
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+}
+
+body {
+  background-color: #0f0f1a;
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  flex-direction: column;
+}
+
+.digit-group input {
+  width: 30px;
+  height: 50px;
+  background-color: #18182a;
+  border: none;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  color: white;
+  margin: 0 2px;
+}
+.digit-group .splitter {
+  padding: 0 5px;
+  color: white;
+  font-size: 24px;
+}
+
+.prompt {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+        .digit-group {
+            margin-left: 1px;
+        }
+        
+        .button {
+  --color: #fff;
+  --background: #6D58FF;
+  --height: 41px;
+  --width: 160px;
+  --icon: #fff;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  width: var(--width);
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color);
+  line-height: var(--height);
+}
+.button:before, .button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.button:before {
+  transform: translate(-50%, -50%);
+  width: var(--before-w, var(--width));
+  height: var(--before-h, var(--height));
+  border-radius: var(--before-r, 7px);
+  background: var(--background);
+  transform-origin: 50% 50%;
+  transition: width 0.3s, height 0.3s, border-radius 0.2s;
+  transition-delay: 0.2s;
+}
+.button:after {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: var(--icon);
+  z-index: 2;
+  border-radius: 50%;
+  transform: scale(0);
+}
+.button span {
+  z-index: 1;
+  display: block;
+  position: relative;
+  opacity: var(--span-o, 1);
+  transform: scale(var(--span-s, 1));
+  transition: opacity 0.3s, transform 0.2s;
+  transition-delay: 0.2s;
+}
+.button svg {
+  width: 15px;
+  height: 13px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  stroke: var(--icon);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transform: translate(-50%, -50%);
+  stroke-dasharray: 17px;
+  stroke-dashoffset: var(--svg-o, 17px);
+  transition: stroke-dashoffset 0.3s ease;
+}
+.button.processing {
+  --before-w: 41px;
+  --before-h: 41px;
+  --before-r: 22px;
+  --span-o: 0;
+  --span-s: .6;
+  --after-s: 1;
+  --svg-o: 34px;
+}
+.button.processing:before {
+  -webkit-animation: pulse 3s linear forwards;
+          animation: pulse 3s linear forwards;
+}
+.button.processing:after {
+  -webkit-animation: dot 3s linear forwards;
+          animation: dot 3s linear forwards;
+}
+.button.processing svg {
+  transition-delay: 3s;
+}
+
+@-webkit-keyframes pulse {
+  4% {
+    transform: translate(-50%, -50%) scaleX(1.1);
+  }
+  8% {
+    transform: translate(-50%, -50%);
+  }
+  24%, 56%, 88% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  40%, 72% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes pulse {
+  4% {
+    transform: translate(-50%, -50%) scaleX(1.1);
+  }
+  8% {
+    transform: translate(-50%, -50%);
+  }
+  24%, 56%, 88% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  40%, 72% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+@-webkit-keyframes dot {
+  8% {
+    transform: scale(0);
+  }
+  16% {
+    transform: scale(1) rotate(30deg) translateX(48px);
+  }
+  95% {
+    transform: scale(1) rotate(1000deg) translateX(48px);
+  }
+  100% {
+    transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
+  }
+}
+@keyframes dot {
+  8% {
+    transform: scale(0);
+  }
+  16% {
+    transform: scale(1) rotate(30deg) translateX(48px);
+  }
+  95% {
+    transform: scale(1) rotate(1000deg) translateX(48px);
+  }
+  100% {
+    transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
+  }
+}
+        </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <center>
+    <img src="images/image1.png" height="300px" width="400px"/>
+        </center>
+    <div class="prompt">
+	Enter the code generated on your E-Mail account to log in!
+</div>
+
+<form method="POST" runat="server" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+	<input type="text" id="digit1" name="digit1" data-next="digit2" />
+	<input type="text" id="digit2" name="digit2" data-next="digit3" data-previous="digit1" />
+	<input type="text" id="digit3" name="digit3" data-next="digit4" data-previous="digit2" />
+	<span class="splitter">&ndash;</span>
+	<input type="text" id="digit4" name="digit4" data-next="digit5" data-previous="digit3" />
+	<input type="text" id="digit5" name="digit5" data-next="digit6" data-previous="digit4" />
+	<input type="text" id="digit6" name="digit6" data-previous="digit5" />
+        <br />
+        <br />
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <center>
+            <button id="btnVerify" class="button" runat="server" onserverclick="btnVerify_ServerClick">
+                <span>Verify</span>
+                <svg viewBox="0 0 15 13">
+                    <polyline points="2 6.5 6 10.5 13 2.5"></polyline>
+                </svg>
+            </button>
+                </center>
+
+        </asp:ContentPlaceHolder>
+    </form>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src='js/OTP.js'> </script>
+    <script>
+        // Some weird issues on mobile & safari - damn .. any ideas?
+
+        document.querySelectorAll(".button").forEach((button) => {
+            button.addEventListener("click", (e) => {
+                button.classList.add("processing");
+        e.preventDefault();
+        });
+        });
+
+        document.querySelector(".restart").addEventListener("click", (e) => {
+            document.querySelectorAll(".button").forEach((button) => {
+                button.classList.remove("processing");
+        });
+        e.preventDefault();
+        });
+
+    </script>
+</body>
+</html>

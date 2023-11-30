@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Hello World</title>
+
+    <!-- FilePond styles -->
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <input type="file">
+
+    <!-- FilePond scripts -->
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script>
+		const inputElement = document.querySelector("input[type='file']");
+		const pond = FilePond.create(inputElement);
+	</script>	
+
+  </body>
+</html>

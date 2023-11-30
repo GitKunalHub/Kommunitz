@@ -1,0 +1,83 @@
+﻿<%@ Master Language="VB" CodeFile="mpRegister.master.vb" Inherits="mpRegister" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <META http-equiv="Page-Enter" content="blendTrans(Duration=0.1)">
+<META http-equiv="Page-Exit" content="blendTrans(Duration=0.1)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register on Kommunitz~</title>
+
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @media screen and (min-width: 301px) and (max-width: 1024px) {
+  #divSignup { display: none; }   /* hide it elsewhere */
+}
+    </style>
+</head>
+<body style="background-image:url('Register.jpg')">
+    <%--<button class="btn btn-secondary grimlock-dark-mode-toggle"></button>--%>
+    <div class="main">
+     <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                      <div id="divSignup" class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">I am already member</a>
+                    </div>
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="post" runat="server">
+                            <div class="form-group" runat="server">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" runat="server" name="name" id="name" placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" runat="server" name="email" id="email" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" runat="server" name="pass" id="pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" runat="server" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"/>
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <div class="form-group form-button">
+                                <asp:Button ID="signup" runat="server" CssClass="form-submit" name="signup" Text="Register" />
+                            </div>
+                            </asp:ContentPlaceHolder>
+                        </form>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+    </div>
+    <asp:Panel ID="Panel1" runat="server">
+
+         <asp:Image ID="imgLogo" runat="server" height="64px" Width="275px" ImageUrl="~/images/logoEmail.png"/>
+    <asp:Label ID="lblHey" runat="server" Text="Hey there, "></asp:Label>
+    <asp:Label ID="lblUsername" runat="server"></asp:Label>
+    <asp:Label ID="lblParagraph1" runat="server" Text = "Welcome to Kommunitz"></asp:Label>
+    <asp:Label ID="lblParagraph2" runat="server" Text="Ayee! Thanks for registering an account with Kommunitz! You're now a part of one of the coolest people on the Planet :D (Which is pretty Rare..).
+
+Before we get started, we would need to verify your email. There will be an OTP right below this section, verify that on your Account and start your journey with more cool users like you."></asp:Label>
+    <asp:Label ID="lblOTP" runat="server" Text="Label"></asp:Label>
+
+    </asp:Panel>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+</body>
+</html>
